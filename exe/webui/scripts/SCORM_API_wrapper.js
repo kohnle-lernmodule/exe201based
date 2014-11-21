@@ -26,7 +26,7 @@ pipwerks.debug = { isActive: true }; 	//Enable (true) or disable (false) for deb
 pipwerks.SCORM = {			//Define the SCORM object
 	version:    null,              	//Store SCORM version.
 	handleCompletionStatus: true,	//Whether or not the wrapper should automatically handle the initial completion status
-	handleExitMode: true,		//Whether or not the wrapper should automatically handle the exit mode
+	handleExitMode: false,		//Whether or not the wrapper should automatically handle the exit mode - Kohnle changed to false
 	API:        { 	handle: null, 
 			isFound: false },	//Create API child object
 	connection: {	isActive: false },	//Create connection child object
@@ -1513,7 +1513,7 @@ pipwerks.SCORM.GetSuccessStatus = function(){
 		
 	if(API){
 		switch(scorm.version){
-			case "1.2" : result = scorm.get("cmi.core.completion_status"); break; // cmi.success_status only exists in 2004
+			case "1.2" : result = scorm.get("cmi.core.lesson_status"); break; // cmi.success_status only exists in 2004
 			case "2004": result = scorm.get("cmi.success_status"); break;
 		}
 	}
