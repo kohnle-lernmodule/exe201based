@@ -524,6 +524,7 @@ class ScormExport(object):
         if self.scormType == "scorm2004" or self.scormType == "scorm1.2":
             self.scriptsDir.copylist(('SCORM_API_wrapper.js',
                                       'SCOFunctions.js', 
+                                      'lernmodule_net.js',
                                       'common.js'), outputDir)     
         # about SCHEMAS:
         schemasDir = ""

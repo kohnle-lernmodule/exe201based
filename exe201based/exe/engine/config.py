@@ -105,7 +105,12 @@ class Config(object):
         'place the objects': [x_('Interactive Activities')],
         'memory match game': [x_('Experimental')],
         'file attachments': [x_('Non-Textual Information')],
-        'sort items': [x_('Experimental')]
+        'sort items': [x_('Experimental')],
+        'sort items': [x_('Interactive Activities')],
+        'scorm test cloze': [x_('Interactive Activities')],
+        'scorm test cloze (multiple options)': [x_('Interactive Activities')],
+        'scorm test dropdown': [x_('Interactive Activities')],
+        'scorm test multiple choice': [x_('Interactive Activities')]
     }
     
     @classmethod

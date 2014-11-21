@@ -111,6 +111,10 @@ class ReflectionBlock(Block):
         else:
             html = self.activityElement.renderView()
             feedback = self.answerElement.renderView()
+        #added lernmodule.net
+        html += '<div class="Reflection" id="Reflection%s">' % (self.id)
+        html += '<textarea id="ReflectionText%s" class="ReflectionText" name="ReflectionText%s"' % (self.id, self.id)
+        html += ' rows=5 style="width:99%"></textarea></div>'
 
         html += common.feedbackBlock(self.id,feedback)
 

@@ -132,6 +132,45 @@ class CasestudyBlock(Block):
         self.previewing = True
         return Block.renderPreview(self, style)
     
+    def renderQuestionElementView(self,element):
+        """
+        Returns an XHTML string for viewing this question element - similar to questionelement.py
+        """
+        html = "<div class=\"question\">\n"
+        html += self.doRenderQuestionElement(element,preview=False)
+        html += "</div>\n"
+        return html
+		
+    def renderQuestionElementPreview(self,element):
+        """
+        Returns an XHTML string for previewing this question element - similar to questionelement.py
+        """
+        return self.doRenderQuestionElement(element,preview=True)
+
+    def doRenderQuestionElement(self,element,preview=False):
+        """
+        Returns an XHTML string for viewing and previewing this question element
+        depending on the value of 'preview' - similar to questionelement.py, but with teaxtarea 
+        """
+        log.debug("renderView called")
+              
+        if preview: 
+            html  = element.question_question.renderPreview()
+        else:
+            html  = element.question_question.renderView()
+
+        html += '<div class="CaseStudy" id="Casestudy%s">' % (element.id)
+        html += '<textarea id="CaseStudyText%s" class="CaseStudyText" name="CaseStudyText%s"'  % (element.id, element.id)
+        html += ' rows=5 style="width:99%"></textarea></div>'
+
+        if  element.question_feedback.field.content.strip() != "" :            
+            if preview: 
+                feedback = element.question_feedback.renderPreview() 
+            else: 
+                feedback = element.question_feedback.renderView()
+            html += common.feedbackBlock(element.id,feedback)
+        
+        return html
     def renderViewContent(self):
         """
         Returns an XHTML string for this block
@@ -144,12 +183,14 @@ class CasestudyBlock(Block):
             html += self.storyElement.renderPreview()
             html + u"<br/>\n"
             for element in self.questionElements:
-                html += element.renderPreview()
+                #html += element.renderPreview()
+				html += self.renderQuestionElementPreview(element)
         else:
             html += self.storyElement.renderView()
             html + u"<br/>\n"
             for element in self.questionElements:
-                html += element.renderView()
+                #html += element.renderView()
+				html += self.renderQuestionElementView(element)
 
         return html
 
