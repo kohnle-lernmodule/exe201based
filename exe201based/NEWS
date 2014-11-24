@@ -1,3 +1,41 @@
+* based on INTEF-exe-2.0.1 revision dd27f4d (www.exelearning.net)
+* Add textareas for reflection and casestudy-iDevices with option to store values (SCORM)
+* Add texts for english (default), spanish and german to SCORM Tests
+* Add immediate Commit for SCORM tests
+* Add score.min and score.max for SCORM tests
+* Add option to have gaps with equal length for SCORM cloze and cloze_multi tests
+* Add option to show correct answers/options for SCORM tests
+* Add SCORM cloze_multi test with option to have many correct answers per cloze
+* Add SCORM dropdown, SCORM cloze and SCORM multiple choice tests
+* Remove SCORM Quiz
+* Tests with Ilias and Moodle
+* Cloze activity may contain whitespaces
+===========================================================================
+
+* lernmodule.net gGmbH for the eXelearningPlus Extensions
+
+Copyright 2012, lernmodule.net gGmbH, Erfurter Str. 14, 76646 Bruchsal, Germany
+
+The eXelearningPlus Extensions are Open Source; you can redistribute the
+software under the terms of the GNU General Public License, Version 2 or later, as
+published by the Free Software Foundation. The software is free to use.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS
+IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER
+OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+===========================================================================
 * Add max score reporting to LMS for SCORM Quiz
 * Add username to startup lock file to permit multiple users on same machine
 * Fix startup with Firefox 3.x tabs hiding interface (Ivo Benner)

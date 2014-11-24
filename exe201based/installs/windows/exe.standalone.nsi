@@ -17,7 +17,7 @@
 SetCompressor /SOLID /FINAL lzma
 Name "${APPNAMEANDVERSION}"
 Icon "..\..\dist\eXe_icon.ico"
-OutFile "INTEF-exe-ready2run-${EXE_VERSION}.exe"
+OutFile "eXelearningPlus-ready2run-${EXE_VERSION}-${EXE_REVISION}.exe"
 
 # Cool progress bar
 Subcaption 3 " "

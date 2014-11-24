@@ -415,12 +415,12 @@ Ext.define('eXe.view.ui.eXeToolbar', {
                                 accesskey: 't',
                                 text: _('eXe Tutorial')
                             },
-                            {
-                                xtype: 'accesskey_menuitem',
-                                itemId: 'help_manual',
-                                accesskey: 'm',
-                                text: _('eXe Manual')
-                            },
+                            // {
+                                // xtype: 'accesskey_menuitem',
+                                // itemId: 'help_manual',
+                                // accesskey: 'm',
+                                // text: _('eXe Manual')
+                            // },
                             {
                                 xtype: 'accesskey_menuitem',
                                 itemId: 'help_notes',
@@ -455,7 +455,7 @@ Ext.define('eXe.view.ui.eXeToolbar', {
                                 xtype: 'accesskey_menuitem',
                                 itemId: 'help_about',
                                 accesskey: 'a',
-                                text: _('About eXe')
+                                text: _('About eXe')+'learningPlus'
                             }
                         ]
                     }

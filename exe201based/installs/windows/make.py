@@ -36,6 +36,9 @@ sys.path.insert(0, WDIR)
 from exe.engine import version
 versions = "/DEXE_VERSION=%s /DEXE_REVISION=%s /DEXE_BUILD=%s /DEXE_SPLASH=%s" \
         % (version.release, version.revision, version.version, BRANDED_JPG)
+# for specific branches use 
+#versions = "/DEXE_VERSION=%s /DEXE_REVISION=%s /DEXE_BUILD=%s /DEXE_SPLASH=%s" \
+#        % (version.project+"-"+version.release, version.revision, version.version, BRANDED_JPG)
 open('dist/version', 'w').write(version.version)
 
 # brand the splash screen
@@ -45,7 +48,7 @@ os.chdir(os.path.join(WDIR, 'installs/windows'))
 #without support for libfreetype.
 font = None
 fontcolor = None
-candrawfont = False
+candrawfont = True
 try:
 	font = ImageFont.truetype("arial.ttf", 12)
 	fontcolor = '#808080'
@@ -58,11 +61,12 @@ im = Image.open("splash1.jpg")
 draw = ImageDraw.Draw(im)
 
 if candrawfont:
-	draw.text((150, 102), "Version: " + version.release, font=font,
+	draw.text((148, 102), "Project: " + version.project, font=font,
         fill=fontcolor)
-	draw.text((150, 102 + h), "Revision: " + version.revision,
+	draw.text((148, 116), "Version: " + version.release, font=font,
+        fill=fontcolor)
+	draw.text((148, 130), "Revision: " + version.revision,
         font=font, fill=fontcolor)
-
 del draw
 im.save(BRANDED_JPG)
 
