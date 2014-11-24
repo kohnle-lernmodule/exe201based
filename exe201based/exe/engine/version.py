@@ -26,7 +26,7 @@ Version Information
 project = "eXelearningPlus"
 release = "2.0.1"
 revisionIntef = "dd27f4d"
-revisionLernmodule = "1"
+revisionLernmodule = "2"
 
 revision = revisionIntef+"-"+revisionLernmodule
 version = release

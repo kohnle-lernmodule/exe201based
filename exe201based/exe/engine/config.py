@@ -147,7 +147,7 @@ class Config(object):
 		#FM: New Styles Directory path
         self.stylesDir =Path(self.configDir/'style').abspath()
         #FM: Default Style name
-        self.defaultStyle= u"INTEF"
+        self.defaultStyle= u"standardwhite"
         # browser is the name of a predefined browser specified at http://docs.python.org/library/webbrowser.html.
         # None for system default
         self.browser = None
