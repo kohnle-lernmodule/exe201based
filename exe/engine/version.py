@@ -23,34 +23,43 @@
 Version Information
 """
 
-project = "exe"
+project = "eXelearningPlus"
+release = "2.0.1"
+revisionIntef = "dd27f4d"
+revisionLernmodule = "1"
+
+revision = revisionIntef+"-"+revisionLernmodule
+version = release
+
 pkg_version = None
-try:
-    line = open('debian/changelog').readline()
-    release = line.split(':')[1].split(')')[0]
-except:
-    try:
-        import pkg_resources
-        pkg_version = pkg_resources.require(project)[0].version
-        release = pkg_version[0:-42]
-    except:
-        import sys
-        if sys.platform[:3] == "win":
-            pkg_version = open(sys.prefix + '/version').readline()
-            release = pkg_version[0:-42]
-        else:
-            pkg_version = open('../Resources/exe/version').readline()
-            release = pkg_version[0:-42]
+#try:
+#    line = open('debian/changelog').readline()
+#    release = line.split(':')[1].split(')')[0]
+#except:
+#    try:
+#        import pkg_resources
+#        pkg_version = pkg_resources.require(project)[0].version
+#        release = pkg_version[0:-42]
+#    except:
+#        import sys
+#        if sys.platform[:3] == "win":
+#            pkg_version = open(sys.prefix + '/version').readline()
+#            release = pkg_version[0:-42]
+#        else:
+#            pkg_version = open('../Resources/exe/version').readline()
+#            release = pkg_version[0:-42]
 
-try:
-    import git
 
-    repo = git.Repo()
-    revision = repo.head.commit.hexsha
-except:
-    revision = pkg_version[-40:] if pkg_version else ''
+#try:
+#    import git
+#
 
-version = release + "-r" + revision if revision else release
+#    repo = git.Repo()
+#    revision = repo.head.commit.hexsha
+#except:
+#    revision = pkg_version[-40:] if pkg_version else ''
+
+#version = release + "-r" + revision if revision else release
 
 if __name__ == '__main__':
     print project, version

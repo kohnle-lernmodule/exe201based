@@ -13,7 +13,7 @@ Name "${APPNAMEANDVERSION}"
 InstallDir "$PROGRAMFILES\exe"
 InstallDirRegKey HKLM "Software\${APPNAME}" ""
 Icon "..\..\dist\eXe_icon.ico"
-OutFile "INTEF-eXe-install-${EXE_VERSION}.exe"
+OutFile "eXelearningPlus-install-${EXE_VERSION}-${EXE_REVISION}.exe"
 
 ; Modern interface settings
 !include "MUI.nsh"

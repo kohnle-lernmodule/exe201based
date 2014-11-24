@@ -150,9 +150,9 @@ Ext.define('eXe.controller.Toolbar', {
             '#help_tutorial': {
                 click: this.fileOpenTutorial
             },
-            '#help_manual': {
-                click: { fn: this.processBrowseEvent, url: 'file://%s/docs/manual/Online_manual.html' }
-            },
+            // '#help_manual': {
+                // click: { fn: this.processBrowseEvent, url: 'file://%s/docs/manual/Online_manual.html' }
+            // },
             '#help_notes': {
                 click: { fn: this.processBrowseEvent, url: 'file://%t' }
             },
@@ -291,7 +291,7 @@ Ext.define('eXe.controller.Toolbar', {
 	aboutPage: function() {
         var about = new Ext.Window ({
           height: eXe.app.getMaxHeight(700),
-          width: 420,
+          width: 490,
           modal: true,
           resizable: false,
           id: 'aboutwin',
